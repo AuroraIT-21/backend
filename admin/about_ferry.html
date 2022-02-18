@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #474e5d;
+            color: white;
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .container::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .title {
+            color: grey;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="about-section" style="background-color: rgb(39, 63, 63);">
+        <h1>About Ferry</h1>
+        <img src="images/about_ferry.jpg" alt="Jane" style="width:50%">
+    </div>
+
+    <div class="para-section" style="background-color: rgb(39, 63, 63);">
+        <div class="heading-section" style="background-color: aqua;">
+            <h2 style="text-align:center">Why Ferry</h2>
+        </div>
+        <div class="row" style="margin-left: 550px;">
+            <div class="column">
+                <div class="card-section" style="background-color: aqua;">
+                    <div class="card">
+                        <div class="container">
+                            <h2>Ferry Information</h2>
+                            <p>A ferry is a boat that transports passengers and sometimes also vehicles, usually across
+                                rivers or short stretches of sea.</p>
+                            <p>1 : a place where persons or things are carried across a body of water (such as a river) in a
+                                boat. 2 : ferryboat. 3 : a franchise or right to operate a ferry service across a body of
+                                water. 4 : an organized service and route for flying airplanes especially across a sea or
+                                continent for delivery to the user.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

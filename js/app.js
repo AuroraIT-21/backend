@@ -81,15 +81,19 @@ function displayInfo() {
             
           }
 
-          var aBusTruck = Math.floor(fWeight / 10000);
-          var aMicro = Math.floor(fWeight / 5000);
-          var aMotor = Math.floor(fWeight / 100);
-          var aPass = Math.floor(fWeight / 65);
-
-          document.getElementById("dBus").innerHTML = aBusTruck;
-          document.getElementById("dMicro").innerHTML = aMicro;
-          document.getElementById("dMotor").innerHTML = aMotor;
-          document.getElementById("dPass").innerHTML = aPass;
+          if (fWeight > 0 && fWeight <= 1000000) {
+              var aBusTruck = Math.floor(fWeight / 10000);
+              var aMicro = Math.floor(fWeight / 5000);
+              var aMotor = Math.floor(fWeight / 100);
+              var aPass = Math.floor(fWeight / 65);
+    
+              document.getElementById("dBus").innerHTML = aBusTruck;
+              document.getElementById("dMicro").innerHTML = aMicro;
+              document.getElementById("dMotor").innerHTML = aMotor;
+              document.getElementById("dPass").innerHTML = aPass;
+            } else {
+              playAudio();
+            }
         }
       }
     }
@@ -119,20 +123,29 @@ function displayInfo() {
         } else {
           fWeight -= qnt * 65;
         }
+        if (fWeight > 0 && fWeight <= 1000000) {
+          var aBusTruck = Math.floor(fWeight / 10000);
+          var aMicro = Math.floor(fWeight / 5000);
+          var aMotor = Math.floor(fWeight / 100);
+          var aPass = Math.floor(fWeight / 65);
 
-        var aBusTruck = Math.floor(fWeight / 10000);
-        var aMicro = Math.floor(fWeight / 5000);
-        var aMotor = Math.floor(fWeight / 100);
-        var aPass = Math.floor(fWeight / 65);
-
-        document.getElementById("dBus").innerHTML = aBusTruck;
-        document.getElementById("dMicro").innerHTML = aMicro;
-        document.getElementById("dMotor").innerHTML = aMotor;
-        document.getElementById("dPass").innerHTML = aPass;
+          document.getElementById("dBus").innerHTML = aBusTruck;
+          document.getElementById("dMicro").innerHTML = aMicro;
+          document.getElementById("dMotor").innerHTML = aMotor;
+          document.getElementById("dPass").innerHTML = aPass;
+        } else {
+          playAudio();
+        }
       }
     }
   }
 }
+
+///////////////
+const playAudio = (audio) => {
+  audio = new Audio("audio/sound.wav");
+  audio.play();
+};
 
 // Submit and Display Fresult End
 
