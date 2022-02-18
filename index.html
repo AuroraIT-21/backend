@@ -30,7 +30,7 @@
 			<div class="card">
 
 				<div class="card-body">
-					<form action="#">
+					<!-- <form action="#"> -->
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -50,7 +50,7 @@
 						<div class="form-group">
 							<button class="btn btn-primary" id="btn">Login</button>
 						</div>
-					</form>
+					<!-- </form> -->
 				</div>
 				<div class="card-footer">
 					<div class="d-flex justify-content-center links">
@@ -77,11 +77,11 @@
 			let passWord = document.getElementById('passord').value;
 
 			if (name == 'admin' && passWord == 1234) {
-				document.location.href = '../admin/index.html'
+				document.location.href = 'admin/index.html'
 				console.log('admin');
 			}
 			else if (name == 'user' && passWord == '12345') {
-				location.replace("https://www.w3schools.com");
+				location.replace("ticket/newFerry.html");
 			}
 			else {
 				console.log('passWord False');
